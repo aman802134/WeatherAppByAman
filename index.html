@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WheatherApp</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- stylesheet -->
+    <!-- script link -->
+    <script src="js/main.js" defer></script>
+    <!-- script link -->
+    <!-- Google font faimily -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700;800&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <!-- Google font faimily -->
+    <!-- Bootstap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- Bootstap icons -->
+</head>
+
+<body>
+    <section class="w-full h-[100vh] bg-BgImage bg-center bg-cover bg-no-repeat flex justify-center items-center">
+        <!-- main wrapper -->
+        <div class="bg-mainColor rounded-md py-5 px-10">
+            <!-- Error encounter -->
+            <div id="locationErr" class="bg-secondColor px-3 rounded-sm py-1  hidden">
+                <p class="text-white">Enter city name</p>
+            </div>
+            <div id="locationErr2" class="bg-secondColor px-3 rounded-sm py-1 my-3 hidden">
+                <p class="text-white">Enter valid city name</p>
+            </div>
+            <!-- Error encounter      -->
+            <!-- search bar container -->
+            <div class="w-full flex justify-between items-center my-4">
+                <!-- search input container -->
+                <label for="search" class="flex-1">
+                    <input type="search" name="location" id="search"
+                        class="w-full rounded-3xl bg-secondColor text-white font-mainFont py-1 px-3 outline-none border-none">
+                </label>
+                <!-- search input container -->
+                <!-- search button -->
+                <div id="searchBtn"
+                    class="bg-white w-10 h-10 rounded-full mx-2 cursor-pointer flex justify-center items-center">
+                    <i class="bi bi-search text-sm"></i>
+                </div>
+                <!-- search button -->
+            </div>
+            <!-- search bar container -->
+            <!-- ####### weather information container ######### -->
+            <div class="w-full my-4">
+                <!-- main info -->
+                <div class="w-full flex flex-col justify-start items-start">
+                    <h3 class="text-white font-mainFont text-2xl">Weather in <span id="City"
+                            class="bg-secondColor px-2 rounded-sm"></span></h3>
+                    <h3 class="text-2xl text-white font-secondFont py-4"> <span id="Temperature"></span><sup>o</sup>C
+                    </h3>
+
+                </div>
+                <!-- main info -->
+            </div>
+            <!-- Additional info -->
+            <div class="my-5 py-3 w-full flex flex-col justify-start items-start ">
+                <span id="Clarity" class="text-white font-secondFont">
+                    <!-- <i></i> -->
+                    
+                </span>
+                <h4  class="text-white font-secondFont">Humidity : <span id="Humidity"></span>%</h4>
+                <h4 class="text-white font-secondFont">Wind speed : <span id="WindSpeed"></span>miles/h</h4>
+            </div>
+            <!-- Additional info -->
+            <!-- ####### weather information container ######### -->
+        </div>
+        <!-- main wrapper -->
+    </section>
+</body>
+
+</html>
